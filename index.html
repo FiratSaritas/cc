@@ -8,21 +8,30 @@
 </head>
 <body>
 
-<div id="header">
-  <button onclick="showInformation()">Information</button>
-  <button onclick="contactUs()">Contact Us</button>
-  <select id="sortSelect" onchange="sortCompanies()">
-    <option value="default">Sort by</option>
-    <option value="alphabetical-ascending">Company Name (A-Z)</option>
-    <option value="alphabetical-descending">Company Name (Z-A)</option>
-    <option value="rating1-ascending">Rating 1 (Low to High)</option>
-    <option value="rating1-descending">Rating 1 (High to Low)</option>
-    <option value="rating2-ascending">Rating 2 (Low to High)</option>
-    <option value="rating2-descending">Rating 2 (High to Low)</option>
-    <option value="rating3-ascending">Rating 3 (Low to High)</option>
-    <option value="rating3-descending">Rating 3 (High to Low)</option>
-  </select>
-  
+<header>
+  <div class="toolbar-left">
+    <button onclick="showInformation()">Information</button>
+    <button onclick="contactUs()">Contact Us</button>
+  </div>
+  <h1>Company Ratings</h1> <!-- Title added here -->
+  <div class="toolbar-right">
+    <select id="sortSelect" onchange="sortCompanies()">
+      <option value="default">Sort by</option>
+      <option value="alphabetical-ascending">Company Name (A-Z)</option>
+      <option value="alphabetical-descending">Company Name (Z-A)</option>
+      <option value="rating1-ascending">Rating 1 (Low to High)</option>
+      <option value="rating1-descending">Rating 1 (High to Low)</option>
+      <option value="rating2-ascending">Rating 2 (Low to High)</option>
+      <option value="rating2-descending">Rating 2 (High to Low)</option>
+      <option value="rating3-ascending">Rating 3 (Low to High)</option>
+      <option value="rating3-descending">Rating 3 (High to Low)</option>
+    </select>
+  </div>
+</header>
+
+<div class="toolbar-search">
+  <input type="text" id="searchInput" placeholder="Search by company name...">
+</div>
 
 <div id="information" style="display: none;">
   <h2>About This Page</h2>
@@ -39,10 +48,6 @@
     <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
     <input type="submit" value="Send">
   </form>
-</div>
-
-<div id="filter">
-  <input type="text" id="searchInput" placeholder="Search by company name...">
 </div>
 
 <div id="companies">

@@ -1,88 +1,127 @@
 /* styles.css */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+header {
+  background-color: #333;
+  color: white;
   padding: 20px;
-}
-
-#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999; /* Ensure the header is on top */
 }
 
-#header button {
+.toolbar-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toolbar-left button {
+  margin-bottom: 10px; /* Added space between buttons */
+}
+
+.toolbar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toolbar-right select {
+  margin-top: 10px; /* Added space to match button alignment */
+  margin-right: 10px; /* Added margin to align with buttons */
+}
+
+header h1 {
+  margin: 0;
+}
+
+button {
   padding: 10px 20px;
-  font-size: 16px;
-  border: none;
   background-color: #007bff;
   color: white;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-#header button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-#sortSelect {
-  padding: 8px;
-  font-size: 16px;
+select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.toolbar-search {
+  background-color: #f9f9f9; /* Added background color to toolbar search */
+  padding: 20px; /* Added padding to toolbar search */
+  width: 100%;
+  position: fixed;
+  top: 80px; /* Adjusted top position to avoid being hidden by header */
+  z-index: 998; /* Ensure the search bar is behind the header */
+}
+
+#searchInput {
+  width: calc(100% - 20px); /* Adjusted input width to accommodate padding */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 #information, #contactForm {
-  background-color: white;
+  margin-top: 140px; /* Adjusted to accommodate the fixed header and toolbar search */
   padding: 20px;
-  margin-bottom: 20px;
+  background-color: #f9f9f9;
 }
 
-#information p, #contactForm p {
-  margin-bottom: 10px;
-}
-
-#filter input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
+#companies {
+  margin-top: 200px; /* Adjusted to accommodate the fixed header and toolbar search */
 }
 
 .company {
-  background-color: white;
-  padding: 20px;
   margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease;
 }
 
 .company:hover {
-  transform: translateY(-5px);
-}
-
-.company h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.company p {
-  margin: 5px 0;
-  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .details {
   margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
 }
 
-.details p {
-  font-size: 14px;
-  color: #666;
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header select {
+    margin-top: 10px;
+  }
+
+  #information, #contactForm {
+    margin-top: 180px; /* Adjusted for smaller screens */
+  }
+
+  #companies {
+    margin-top: 240px; /* Adjusted for smaller screens */
+  }
 }
