@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Ratings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="header">
+  <button onclick="showInformation()">Information</button>
+  <button onclick="contactUs()">Contact Us</button>
+  <select id="sortSelect" onchange="sortCompanies()">
+    <option value="default">Sort by</option>
+    <option value="alphabetical-ascending">Company Name (A-Z)</option>
+    <option value="alphabetical-descending">Company Name (Z-A)</option>
+    <option value="rating1-ascending">Rating 1 (Low to High)</option>
+    <option value="rating1-descending">Rating 1 (High to Low)</option>
+    <option value="rating2-ascending">Rating 2 (Low to High)</option>
+    <option value="rating2-descending">Rating 2 (High to Low)</option>
+    <option value="rating3-ascending">Rating 3 (Low to High)</option>
+    <option value="rating3-descending">Rating 3 (High to Low)</option>
+  </select>
+  
+
+<div id="information" style="display: none;">
+  <h2>About This Page</h2>
+  <p>This page lists companies with their ratings. Users can filter companies and view additional details by clicking on them.</p>
+  <p>Contact: info@example.com</p>
+</div>
+
+<div id="contactForm" style="display: none;">
+  <h2>Contact Us</h2>
+  <form>
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="Send">
+  </form>
+</div>
+
+<div id="filter">
+  <input type="text" id="searchInput" placeholder="Search by company name...">
+</div>
+
+<div id="companies">
+  <div class="company" data-name="X" data-rating1="8" data-rating2="5" data-rating3="6">
+    <h2>X</h2>
+    <p>Rating1: 8, Rating2: 5, Rating3: 6</p>
+    <div class="details" style="display: none;">
+      <p>Additional details about Company X...</p>
+    </div>
+  </div>
+  <div class="company" data-name="Y" data-rating1="4" data-rating2="5" data-rating3="5">
+    <h2>Y</h2>
+    <p>Rating1: 4, Rating2: 5, Rating3: 5</p>
+    <div class="details" style="display: none;">
+      <p>Additional details about Company Y...</p>
+    </div>
+  </div>
+  <div class="company" data-name="BZ" data-rating1="4" data-rating2="8" data-rating3="4">
+    <h2>BZ</h2>
+    <p>Rating1: 4, Rating2: 8, Rating3: 4</p>
+    <div class="details" style="display: none;">
+      <p>Additional details about Company Z...</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
