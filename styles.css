@@ -20,7 +20,6 @@ header {
   top: 0;
   z-index: 999; /* Ensure the header is on top */
 }
-
 .toolbar-left, .toolbar-right {
   display: flex;
   align-items: center;
@@ -59,6 +58,14 @@ h1 {
   margin: 0; /* Remove margin for h1 */
 }
 
+.company h2 {
+  padding-left: 10px; /* Add padding to the left of company names */
+}
+
+.company p {
+  padding-left: 10px; /* Add padding to the left of company names */
+}
+
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -78,6 +85,10 @@ select {
   border-radius: 5px;
 }
 
+.company-container {
+  padding-top: 150px; /* Adjusted padding to accommodate the fixed toolbar */
+}
+
 .company {
   margin-top: 20px; /* Adjusted margin-top to accommodate the fixed toolbar */
   padding-top: 20px; /* Added padding-top to prevent content from being hidden behind fixed elements */
@@ -85,9 +96,8 @@ select {
   border-radius: 5px;
   transition: box-shadow 0.3s ease;
 }
-.company:first-child {
-  margin-top: ; /* Adjusted margin-top to accommodate the fixed toolbar */
-}
+
+
 .company:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -96,11 +106,6 @@ select {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #ccc;
-}
-
-#information, #contactForm {
-  margin-top: 150px; /* Added margin top to ensure visibility above the fixed toolbar */
-  padding-bottom: 0; /* Removed padding bottom */
 }
 
 @media (max-width: 768px) {
@@ -118,8 +123,8 @@ select {
     margin-right: 0; /* Remove margin between select and right edge */
   }
 
-
-  .company:first-child {
-    margin-top: 200px; /* Adjusted margin for smaller window sizes */
+  .company-container {
+    padding-top: 230px; /* Adjusted padding to accommodate the fixed toolbar */
   }
+
 }
