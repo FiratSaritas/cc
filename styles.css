@@ -2,14 +2,14 @@
 
 body {
   background: url('body.png') center/cover no-repeat fixed; /* Background image */
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
   margin: 0;
   padding: 0;
 }
 /* styles.css */
 
 header {
-  background-image: url('image.png'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+  /* background-image: url('body.png'); Replace 'path/to/your/image.jpg' with the path to your image */
   background-size: cover; /* Ensures the background image covers the entire header */
   background-position: center; /* Centers the background image */
   color: rgb(0, 0, 0);
@@ -106,6 +106,35 @@ select {
   transition: box-shadow 0.3s ease;
 }
 
+.companys {
+  margin-top: 0px; /* Adjusted margin-top to accommodate the fixed toolbar */
+  padding-top: 300px; /* Added padding-top to prevent content from being hidden behind fixed elements */
+
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  
+}
+
+.background-image {
+  background: url('banner.png') center/cover no-repeat ; /* Background image */
+  background-position: center bottom;
+  position: relative;
+  
+  z-index: -1; /* Ensure the image is behind other content */
+}
+
+.text-overlay {
+  position: absolute;
+  color: #ffffff;
+  
+  top: 50%; /* Center the text vertically */
+  left: 0;
+  right: 0;
+  text-align: center; /* Center the text horizontally */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1; /* Ensure the text is above the background image */
+}
+
 
 .company:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -138,3 +167,4 @@ select {
   }
 
 }
+

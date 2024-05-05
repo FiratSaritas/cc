@@ -1,6 +1,20 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
   var searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('focus', hideBackgroundImage);
+  searchInput.addEventListener('input', hideBackgroundImage);
+
+  // Function to hide the background image
+  function hideBackgroundImage() {
+    var backgroundImage = document.querySelector('.background-image');
+    if (searchInput.value.trim() !== '') {
+      // If search input has content, hide the background image
+      backgroundImage.style.display = 'none';
+    } else {
+      // If search input is empty, show the background image
+      backgroundImage.style.display = 'block';
+    }
+  }
   var companies = document.getElementById('companies').getElementsByClassName('company');
 
   searchInput.addEventListener('input', function() {

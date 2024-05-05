@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Company Ratings</title>
+  <title>CompanyCott</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,19 +13,19 @@
       <button onclick="showInformation()">Information</button>
       <button onclick="contactUs()">Contact Us</button>
     </div>
-    <h1>Company Ratings</h1>
+    <h1>CompanyCott</h1>
     
     <div class="toolbar-right">
       <select id="sortSelect" onchange="sortCompanies()">
         <option value="default">Sort by</option>
         <option value="alphabetical-ascending">Company Name (A-Z)</option>
         <option value="alphabetical-descending">Company Name (Z-A)</option>
-        <option value="rating1-ascending">Rating 1 (Low to High)</option>
-        <option value="rating1-descending">Rating 1 (High to Low)</option>
-        <option value="rating2-ascending">Rating 2 (Low to High)</option>
-        <option value="rating2-descending">Rating 2 (High to Low)</option>
-        <option value="rating3-ascending">Rating 3 (Low to High)</option>
-        <option value="rating3-descending">Rating 3 (High to Low)</option>
+        <option value="rating1-ascending">Human Rights (Low to High)</option>
+        <option value="rating1-descending">Human Rights (High to Low)</option>
+        <option value="rating2-ascending">Sustainable Operations (Low to High)</option>
+        <option value="rating2-descending">Sustainable Operations (High to Low)</option>
+        <option value="rating3-ascending">Political Statements (Low to High)</option>
+        <option value="rating3-descending">Political Statements (High to Low)</option>
       </select>
     </div>
     <div class="toolbar-search">
@@ -49,29 +49,76 @@
 
 <div class="company-container">
   <div id="information" style="display: none;">
-    <h2>About This Page</h2>
-    <p>This page lists companies with their ratings. Users can filter companies and view additional details by clicking on them.</p>
+    <h2>Welcome to Companycott!</h2>
+    <p>Where companies are listed and rated based on various important factors such as Human Rights, Sustainable Operations, and Political Statements. Each company is assigned a rating between 1 to 3, with 1 indicating a poor performance, 2 representing a moderate performance, and 3 signifying a good performance.
+      <br><br>
+      In the future, it is increasingly crucial for companies to take responsibility for shaping a sustainable and ethical future. As global challenges mount, from environmental degradation to social injustices, the role of businesses in driving positive change becomes paramount. Our platform serves as a tool for consumers and stakeholders to assess the impact of companies and make informed decisions about which ones to support.
+      <br><br>   
+      By evaluating companies across key criteria, we aim to provide transparency and accountability in the corporate landscape. Through this, individuals can gauge whether a company aligns with their values and aspirations for a better world.
+      <br><br>
+      Together, let's drive positive change and hold companies accountable for their actions.
+      <br><br>
+      Contact us for any questions or how we can improve our platform
+      Your feedback is invaluable as we strive to create a more transparent and responsible business environment.
+    </p>
     <p>Contact: info@example.com</p>
   </div>
-
+  <div class="companys background-image">
+    <h1 class="text-overlay">Shift Company Mindsets, <br> Shape the Future.</h1>
+  </div>
+  
   <div id="companies">
-    <div class="company" data-name="X" data-rating1="8" data-rating2="5" data-rating3="6">
-      <h2>X</h2>
-      <p>Rating1: 8, Rating2: 5, Rating3: 6</p>
+    
+    <div class="company" data-name="LuminaTech Solutions" data-rating1="1" data-rating2="2" data-rating3="1">
+      <h2>LuminaTech Solutions</h2>
+      <p>Human Rights: 1<br> Sustainable Operations: 2<br> Political Statements: 1</p>
+      <div class="details" style="display: none;">
+        <p>LuminaTech Solutions is a leading technology firm specializing in innovative renewable energy solutions.
+          With a team of dedicated engineers and researchers, we are committed to developing sustainable technologies
+          that reduce carbon emissions and promote environmental stewardship. Our groundbreaking solar panel designs
+          have been recognized for their efficiency and reliability, contributing to a greener future for communities
+          worldwide. At LuminaTech, we prioritize ethical business practices and strive to uphold the highest
+          standards of corporate responsibility. Join us in our mission to harness the power of technology
+          for a cleaner, brighter tomorrow.</p>
+      </div>
+    </div>
+    <div class="company" data-name="NovoGen Innovations" data-rating1="2" data-rating2="2" data-rating3="2">
+      <h2>NovoGen Innovations</h2>
+      <p>Human Rights: 2<br> Sustainable Operations: 2<br> Political Statements: 3</p>
+      <div class="details" style="display: none;">
+        <p>NovoGen Innovations is a forward-thinking biotechnology company dedicated to revolutionizing healthcare through groundbreaking research and development. Our commitment to human rights is reflected in our rigorous ethical standards, ensuring fair treatment and respect for all individuals within our organization and across our supply chain. We prioritize employee well-being, offer fair wages, and actively support diversity and inclusion initiatives.
+          <br><br>
+          In terms of sustainable operations, NovoGen Innovations is dedicated to minimizing our environmental footprint. From implementing energy-efficient practices in our laboratories to sourcing eco-friendly materials for our products, we strive to operate in harmony with the planet. Our sustainability efforts extend beyond mere compliance, as we continually seek out innovative solutions to reduce waste and conserve resources.
+          <br><br>
+          On the political front, NovoGen Innovations proudly stands for progressive values and social justice. We advocate for policies that promote access to healthcare for all, support scientific research funding, and advance equality and diversity in the workforce. Our commitment to making a positive impact on society is evident in our proactive engagement with policymakers and our advocacy for meaningful change.
+          <br><br>
+          Join us at NovoGen Innovations as we lead the way in advancing healthcare, championing sustainability, and advocating for a more equitable world.</p>
+      </div>
+    </div>
+    <div class="company" data-name="StellarEdge Dynamics" data-rating1="2" data-rating2="3" data-rating3="3">
+      <h2>StellarEdge Dynamics</h2>
+      <p>Human Rights: 2<br> Sustainable Operations: 3<br> Political Statements: 3</p>
+      <div class="details" style="display: none;">
+        <p>Additional details about Company Z...</p>
+      </div>
+    </div>
+    <div class="company" data-name="AtlasForge Industries" data-rating1="1" data-rating2="1" data-rating3="2">
+      <h2>AtlasForge Industries</h2>
+      <p>Human Rights: 1<br> Sustainable Operations: 1<br> Political Statements: 2</p>
       <div class="details" style="display: none;">
         <p>Additional details about Company X...</p>
       </div>
     </div>
-    <div class="company" data-name="Y" data-rating1="4" data-rating2="5" data-rating3="5">
-      <h2>Y</h2>
-      <p>Rating1: 4, Rating2: 5, Rating3: 5</p>
+    <div class="company" data-name="Equinox Dynamics" data-rating1="3" data-rating2="3" data-rating3="3">
+      <h2>Equinox Dynamics</h2>
+      <p>Human Rights: 3<br> Sustainable Operations: 3<br> Political Statements: 3</p>
       <div class="details" style="display: none;">
         <p>Additional details about Company Y...</p>
       </div>
     </div>
-    <div class="company" data-name="BZ" data-rating1="4" data-rating2="8" data-rating3="4">
-      <h2>BZ</h2>
-      <p>Rating1: 4, Rating2: 8, Rating3: 4</p>
+    <div class="company" data-name="ZenithPeak Enterprises" data-rating1="2" data-rating2="2" data-rating3="1">
+      <h2>ZenithPeak Enterprises</h2>
+      <p>Human Rights: 2<br> Sustainable Operations: 2<br> Political Statements: 1</p>
       <div class="details" style="display: none;">
         <p>Additional details about Company Z...</p>
       </div>
